@@ -1,10 +1,12 @@
 public interface DeliveryHandler {
     void handleDelivery(String location);
+    void setNextHandler(DeliveryHandler nextHandler);
 }
 
 class LocationDeliveryHandler implements DeliveryHandler {
     private DeliveryHandler nextHandler;
 
+    @Override
     public void setNextHandler(DeliveryHandler nextHandler) {
         this.nextHandler = nextHandler;
     }
@@ -22,6 +24,7 @@ class LocationDeliveryHandler implements DeliveryHandler {
 class PickupPointDeliveryHandler implements DeliveryHandler {
     private DeliveryHandler nextHandler;
 
+    @Override
     public void setNextHandler(DeliveryHandler nextHandler) {
         this.nextHandler = nextHandler;
     }
@@ -39,6 +42,7 @@ class PickupPointDeliveryHandler implements DeliveryHandler {
 class InStoreDeliveryHandler implements DeliveryHandler {
     private DeliveryHandler nextHandler;
 
+    @Override
     public void setNextHandler(DeliveryHandler nextHandler) {
         this.nextHandler = nextHandler;
     }
@@ -52,3 +56,10 @@ class InStoreDeliveryHandler implements DeliveryHandler {
         }
     }
 }
+
+
+//aici am folosit un pattern nou, Chain of Responsibility,
+//mi se pare mult mai potrivit pentru ce am nevoie aici,
+//pentru că acesta permite un lanț de gestionări pentru
+//a procesa o cerere și decuplează obiectele expeditor
+//și receptor

@@ -3,8 +3,8 @@ public interface Command {
 }
 
 class AddToCartCommand implements Command {
-    private Cart cart;
-    private Product product;
+    private final Cart cart;
+    private final Product product;
 
     public AddToCartCommand(Cart cart, Product product) {
         this.cart = cart;
@@ -18,7 +18,7 @@ class AddToCartCommand implements Command {
 }
 
 class CompleteOrderCommand implements Command {
-    private Order order;
+    private final Order order;
 
     public CompleteOrderCommand(Order order) {
         this.order = order;

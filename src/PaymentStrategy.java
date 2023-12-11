@@ -16,9 +16,5 @@ class CardPayment implements PaymentStrategy {
     }
 }
 
-class LoanPayment implements PaymentStrategy {
-    @Override
-    public void pay(double amount) {
-        // Logic for loan payment
-    }
-}
+//aici am folosit Strategy Pattern pentru a putea oferi
+//clienților posibilitatea de a folosi diferite metode de plată

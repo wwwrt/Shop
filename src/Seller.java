@@ -26,3 +26,8 @@ class CorporateSeller implements Seller {
         System.out.println("Product added by Corporate Seller");
     }
 }
+
+
+// aici am folosit Factory pentru că această metodă îmi ofera
+// posibilitatea de a crea diferite tipuri de sellers (individual
+// corporate) respectând o interfață comună

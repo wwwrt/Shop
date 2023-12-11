@@ -1,15 +1,18 @@
-public class EShopPlatform {
-    private static EShopPlatform instance;
+public final class EShopPlatform {
 
     private EShopPlatform() {
-        // private constructor to prevent instantiation
     }
 
     public static EShopPlatform getInstance() {
-        if (instance == null) {
-            instance = new EShopPlatform();
-            // Other initialization code here
-        }
-        return instance;
+        return EShopPlatformHolder.INSTANCE;
+    }
+
+    private static class EShopPlatformHolder {
+        private static final EShopPlatform INSTANCE = new EShopPlatform();
     }
 }
+
+
+// am folosit Singleton pentru a ma asigura ca am o singura
+// instanță a platformei eShop, și pentru a evita instanțele
+// multiple care ar putea duce înspre incoerența datelor

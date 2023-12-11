@@ -14,3 +14,5 @@ class DiscountPromotion implements Promotion {
         return price - (price * discountPercent / 100);
     }
 }
+
+//am folosit decoarator deoarece permite configurații de promovare dinamice și flexibile

@@ -8,3 +8,6 @@ class Client implements Observer {
         System.out.println("Notification for client: " + message);
     }
 }
+
+//am folosit Observer deoarece în felul acesta clienții
+// pot fi notificați în legătură cu produsele de care sunt interesați

@@ -22,3 +22,8 @@ class DeliveredState implements OrderState {
         System.out.println("Order has been delivered");
     }
 }
+
+// aici m-am documentat mai mult, deoarece am utilizat un
+//pattern nou, State, pentru că acesta permite unui obiect
+// comandă să își modifice comportamentul atunci când starea
+// sa internă se schimbă
