@@ -1,7 +1,7 @@
 public class LoanPayment implements PaymentStrategy {
-    private final int numberOfInstallments;
+    private int numberOfInstallments = 0;
 
-    public LoanPayment(int numberOfInstallments) {
+    public LoanPayment() {
         this.numberOfInstallments = numberOfInstallments;
     }
 

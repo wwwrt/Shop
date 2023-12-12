@@ -23,7 +23,7 @@ class DeliveredState implements OrderState {
     }
 }
 
-// aici m-am documentat mai mult, deoarece am utilizat un
-//pattern nou, State, pentru că acesta permite unui obiect
+// aici am utilizat patternul State, pentru că acesta permite unui obiect
 // comandă să își modifice comportamentul atunci când starea
 // sa internă se schimbă
+

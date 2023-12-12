@@ -3,7 +3,7 @@ public interface Promotion {
 }
 
 class DiscountPromotion implements Promotion {
-    private double discountPercent;
+    private final double discountPercent;
 
     public DiscountPromotion(double discountPercent) {
         this.discountPercent = discountPercent;
